@@ -6,6 +6,9 @@ export default {
       backgroundImage: {
         custom:
           "linear-gradient(90deg, rgba(252,0,255,1) 0%, rgba(0,219,222,1) 100%)",
+
+        customOne:
+          "linear-gradient(175deg, rgba(255,255,255,1) 0%, rgba(48,48,48,1) 100%)",
       },
       maxWidth: {
         container: "1730px",
