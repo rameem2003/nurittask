@@ -4,7 +4,7 @@ import Image from "./Image";
 
 const ReviewCard = () => {
   return (
-    <div className="p-[1px] bg-custom rounded-lg w-[540px]">
+    <div className="p-[1px] bg-custom rounded-lg w-[300px] lg:w-[540px]">
       <div className=" bg-body rounded-lg py-[13px] px-[15px] lg:py-[49px] lg:px-[46px]">
         <Flex className={`items-center gap-4`}>
           <div className="h-[28px] w-[28px] lg:h-[68px] lg:w-[68px] bg-gray-700 rounded-full p-[1px]">

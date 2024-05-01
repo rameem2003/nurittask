@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Container>
       <Flex
-        className={` w-[1730px] items-center  justify-start lg:justify-center my-[47px] gap-4 lg:gap-[150px] overflow-hidden`}
+        className={`  items-center  justify-start lg:justify-center my-[47px] gap-4 lg:gap-[150px] overflow-hidden`}
       >
         <div className=" w-[58px] h-[58px] flex items-center justify-center lg:h-auto lg:w-auto rounded-lg border-[1px] lg:border-none border-white p-2 lg:p-0">
           <Image className={`w-[20px] lg:w-auto`} src={`icon1.png`} />
@@ -18,7 +18,7 @@ const Header = () => {
         </div>
 
         <div className="w-[58px] h-[58px] flex items-center justify-center lg:h-auto lg:w-auto rounded-lg border-[1px] lg:border-none border-white  p-2  lg:p-0">
-          <Image className={`w-[20px] lg:w-auto`} srssc={`icon3.png`} />
+          <Image className={`w-[20px] lg:w-auto`} src={`icon3.png`} />
         </div>
 
         <div className="w-[58px] h-[58px] flex items-center justify-center  lg:h-auto lg:w-auto rounded-lg border-[1px] lg:border-none border-white  p-2  lg:p-0">

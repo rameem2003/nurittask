@@ -55,7 +55,7 @@ const HomeBanner = () => {
             </button>
 
             <Flex
-              className={`items-end gap-[22px] mt-[66px] lg:mt-[170px] ml-[-40px]`}
+              className={`items-end gap-[22px] mt-[66px] lg:mt-[170px] ml-[-20px]`}
             >
               <div className="w-[62px] h-[62px] lg:w-[121px] lg:h-[121px] bg-customOne rounded-lg p-[2px] hover:h-[85px] hover:w-[85px] lg:hover:w-[175px] lg:hover:h-[175px] duration-150 ease-in-out">
                 <div className="h-full w-full bg-black p-[1px] rounded-lg">
