@@ -113,7 +113,7 @@ const Footer = () => {
         </Flex>
 
         <Flex
-          className={`mt-[203px] items-center justify-center gap-5 flex-wrap`}
+          className={`mt-[53px] lg:mt-[203px] items-center justify-start lg:justify-center gap-5 flex-wrap`}
         >
           <Image src={`pay1.png`} />
           <Image src={`pay2.png`} />
