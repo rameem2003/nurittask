@@ -8,7 +8,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import Container from "./Container";
 const Footer = () => {
   return (
-    <section className="mx-[30px] mb-[21px] rounded-lg bg-custom p-[1px]">
+    <section className="mx-[30px] mb-[21px] mt-[80px] lg:mt-[200px] rounded-lg bg-custom p-[1px]">
       <div className="bg-[#1E2127] pt-10 px-7 lg:pt-[151px] lg:px-[111px] rounded-lg">
         <Flex className={` gap-[56px] lg:gap-[155px] flex-col lg:flex-row`}>
           <div className=" w-full lg:w-[3/12]">

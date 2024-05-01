@@ -96,7 +96,7 @@ const WeeklyDeals = () => {
                 </button>
               </Flex>
 
-              <Image src={`bigLine.png`} className={` hidden lg:w-full`} />
+              <Image src={`bigLine.png`} className={`w-[50%] lg:w-auto`} />
 
               <div>
                 <button className=" font-os font-normal text-[12px]  lg:text-[24px] lg:py-[11px] lg:px-4 p-[6px] border-[1px] text-white border-white rounded-lg block lg:hidden">
