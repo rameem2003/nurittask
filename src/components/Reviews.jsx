@@ -4,7 +4,7 @@ import Image from "./Image";
 import ReviewCard from "./ReviewCard";
 const Reviews = () => {
   return (
-    <Flex className={`items-center gap-4 lg:gap-[73px] mb-56 mt-[128px]`}>
+    <Flex className={`items-center gap-4 lg:gap-[73px] mt-[128px]`}>
       <div className="w-[2/12]">
         <h1 className=" font-os font-bold text-[12px] lg:text-[36px] text-white text-center">
           Trustpilot
