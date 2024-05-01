@@ -100,14 +100,14 @@ const Newarrivals = () => {
 
         <div className="mt-[44px] w-full">
           <Slider {...settings}>
-            <GameCard />
-            <GameCard />
-            <GameCard />
-            <GameCard />
-            <GameCard />
-            <GameCard />
-            <GameCard />
-            <GameCard />
+            <GameCard className={`w-[158px] lg:w-[393px]`} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} />
           </Slider>
         </div>
       </Container>

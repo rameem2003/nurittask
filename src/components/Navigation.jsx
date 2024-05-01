@@ -5,17 +5,24 @@ import Image from "./Image";
 import { FaSearch, FaHeart, FaShoppingBag, FaUserCircle } from "react-icons/fa";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { IoSearchCircle } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import MenuBar from "./MenuBar";
 
 const Navigation = () => {
   return (
     <nav className="pt-[54px] ">
       <Container className={`border-b-[1px] border-gray-300 pb-9 `}>
         <Flex className={`items-center justify-between`}>
-          <Image
-            src={`/logo.png`}
-            className={`w-[112px] lg:w-[213px]`}
-            alt={`logo`}
-          />
+          <Flex className={`items-center gap-[14px]`}>
+            <MenuBar />
+            <Link to={`/`}>
+              <Image
+                src={`/logo.png`}
+                className={`w-[112px] lg:w-[213px]`}
+                alt={`logo`}
+              />
+            </Link>
+          </Flex>
 
           <div className=" relative hidden lg:block">
             <input

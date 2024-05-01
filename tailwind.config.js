@@ -9,6 +9,9 @@ export default {
 
         customOne:
           "linear-gradient(175deg, rgba(255,255,255,1) 0%, rgba(48,48,48,1) 100%)",
+
+        customTwo:
+          "linear-gradient(164deg, rgba(255,0,0,1) 0%, rgba(255,199,0,1) 100%)",
       },
       maxWidth: {
         container: "1730px",
@@ -16,6 +19,7 @@ export default {
       colors: {
         body: "#1E1E1E",
         fade: "#1E2127",
+        pink: "#FB01FF",
       },
 
       fontFamily: {
