@@ -8,12 +8,12 @@ const GameCard = ({ className, isBorder }) => {
   const navigate = useNavigate();
   return (
     <div
-      className={`mx-auto h-full ${
+      className={` mx-auto h-full ${
         isBorder && "bg-custom rounded-lg p-[1px]"
       }  mb-4`}
     >
       <div
-        onClick={() => navigate("/shop")}
+        onClick={() => navigate("/product")}
         className={` bg-fade rounded-lg py-4 px-3 ${className}`}
       >
         <div className=" relative">

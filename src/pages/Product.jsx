@@ -1,19 +1,97 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../components/Container";
 import Flex from "../components/Flex";
 import Image from "../components/Image";
 import { BiSolidError } from "react-icons/bi";
 import { FaShareNodes } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa6";
-import { MdAddShoppingCart } from "react-icons/md";
+import { MdAddShoppingCart, MdOutlineAddShoppingCart } from "react-icons/md";
 import { FaInfoCircle } from "react-icons/fa";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import ReviewCard from "../components/ReviewCard";
+import Newarrivals from "../components/Newarrivals";
 
 const Product = () => {
+  const [slide, setSlide] = useState(0);
+
+  let settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          dots: true,
+          rows: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          beforeChange: (prev, next) => {
+            setSlide(next);
+          },
+          appendDots: (dots) => (
+            <div
+              style={{
+                borderRadius: "10px",
+                padding: "10px",
+                display: "flex",
+              }}
+            >
+              <ul
+                style={{
+                  margin: "12px auto",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "9px",
+                  cursor: "pointer",
+                }}
+              >
+                {dots}
+              </ul>
+            </div>
+          ),
+          customPaging: (i) => (
+            <div
+              style={
+                i === slide
+                  ? {
+                      width: "14px",
+                      height: "14px",
+                      backgroundColor: "#ffffff",
+                      cursor: "pointer",
+                      transition: "0.4s",
+                      borderRadius: "100%",
+                    }
+                  : {
+                      width: "10px",
+                      height: "10px",
+                      backgroundColor: "gray",
+                      cursor: "pointer",
+                      transition: "0.4s",
+                      borderRadius: "100%",
+                    }
+              }
+            >
+              {/* {i + 1} */}
+
+              {console.log(i)}
+            </div>
+          ),
+        },
+      },
+    ],
+  };
   return (
     <section>
       <Container>
-        <Flex className={`gap-[30px]`}>
-          <div className="w-1/2">
+        <Flex className={`gap-[30px] flex-col lg:flex-row`}>
+          <div className=" w-full lg:w-1/2">
             <Image src={`/product.png`} className={` w-full`} />
 
             <Flex
@@ -26,7 +104,7 @@ const Product = () => {
               </p>
             </Flex>
           </div>
-          <div className="w-1/2">
+          <div className=" w-full lg:w-1/2">
             <div className=" rounded-lg bg-custom p-[1px]">
               <div className=" rounded-lg lg:py-[23px] lg:px-[58px] bg-fade">
                 <Flex className={`items-center justify-center gap-1 mb-5`}>
@@ -153,7 +231,9 @@ const Product = () => {
 
                 <div className="w-full h-[1px] bg-gray-500 mt-[29px]"></div>
 
-                <Flex className={`items-center justify-between mt-[31px]`}>
+                <Flex
+                  className={`items-center justify-between mt-[31px] flex-wrap lg:flex-nowrap`}
+                >
                   <Flex className={` items-center gap-[10px]`}>
                     <div>
                       <p className=" font-os font-normal text-[13px] lg:text-[18px] text-gray-400">
@@ -169,7 +249,7 @@ const Product = () => {
                     </p>
                   </Flex>
 
-                  <button className=" py-2 px-[45px] lg:py-3 lg:px-[27px] rounded-lg font-os font-normal text-black text-[14px] lg:text-[24px] bg-customTwo">
+                  <button className=" py-2 px-[95px] lg:py-3 lg:px-[27px] rounded-lg font-os font-normal text-black text-[14px] lg:text-[24px] bg-customTwo">
                     Grab 15% OFF
                   </button>
 
@@ -181,7 +261,7 @@ const Product = () => {
                     <option value="">1</option>
                   </select>
 
-                  <button className=" py-2 px-[45px] lg:py-3 lg:px-[22px] rounded-lg font-os font-normal text-white text-[14px] lg:text-[24px] bg-custom flex items-center">
+                  <button className=" py-2 px-[95px] lg:py-3 lg:px-[22px] rounded-lg font-os font-normal text-white text-[14px] lg:text-[24px] bg-custom flex items-center">
                     <MdAddShoppingCart /> Buy Now
                   </button>
                 </Flex>
@@ -201,8 +281,10 @@ const Product = () => {
           </div>
         </Flex>
 
-        <Flex className={` mt-[46px] lg:mt-[176px]`}>
-          <div className="w-1/2">
+        <Flex
+          className={` mt-[46px] lg:mt-[176px] gap-[30px] flex-col-reverse lg:flex-row`}
+        >
+          <div className=" w-full lg:w-1/2">
             <div>
               <h1 className=" font-os font-normal text-[16px] lg:text-[30px] text-white">
                 Description
@@ -232,7 +314,7 @@ const Product = () => {
                   </p>
                 </div>
                 <div className="w-9/12">
-                  <Flex className={`gap-[11px]`}>
+                  <Flex className={` gap-1 lg:gap-[11px]`}>
                     <span className=" py-3 px-5 rounded-lg bg-fade font-os font-normal text-[14px] lg:text-[24px] text-white">
                       2018-07-30
                     </span>
@@ -247,7 +329,7 @@ const Product = () => {
                   </p>
                 </div>
                 <div className="w-9/12">
-                  <Flex className={`gap-[11px]`}>
+                  <Flex className={`gap-1 lg:gap-[11px]`}>
                     <span className=" py-3 px-5 rounded-lg bg-fade font-os font-normal text-[14px] lg:text-[24px] text-white">
                       Adventure
                     </span>
@@ -267,7 +349,7 @@ const Product = () => {
                   </p>
                 </div>
                 <div className="w-9/12">
-                  <Flex className={`gap-[11px]`}>
+                  <Flex className={`gap-1 lg:gap-[11px]`}>
                     <span className=" py-3 px-5 rounded-lg bg-fade font-os font-normal text-[14px] lg:text-[24px] text-white">
                       Adventure
                     </span>
@@ -282,8 +364,185 @@ const Product = () => {
               </Flex>
             </div>
           </div>
-          <div className="w-1/2"></div>
+          <div className=" w-full lg:w-1/2">
+            <div className=" bg-fade py-[22px] px-[14px] lg:py-[31px] lg:px-[42px] rounded-lg">
+              <h1 className=" font-os font-normal text-[16px] lg:text-[30px] text-white mb-[30px]">
+                Offers from other sellers
+              </h1>
+
+              <Flex className={`items-center gap-[14px] mb-[22px]`}>
+                <div>
+                  <p className=" w-auto lg:w-[280px] font-os font-normal text-[12px] lg:text-[23px] text-black py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-white">
+                    Sellername
+                  </p>
+                </div>
+
+                <Flex className=" items-center gap-1 font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-body">
+                  <Image src={`star.png`} />
+                  <p>100% of 281 ratings</p>
+                </Flex>
+
+                <div>
+                  <p className=" font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-body">
+                    $59.99
+                  </p>
+                </div>
+
+                <button className="font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-custom">
+                  <MdOutlineAddShoppingCart />
+                </button>
+              </Flex>
+              <Flex className={`items-center gap-[14px] mb-[22px]`}>
+                <div>
+                  <p className=" w-auto lg:w-[280px] font-os font-normal text-[12px] lg:text-[23px] text-black py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-white">
+                    Sellername
+                  </p>
+                </div>
+
+                <Flex className=" items-center gap-1 font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-body">
+                  <Image src={`star.png`} />
+                  <p>100% of 281 ratings</p>
+                </Flex>
+
+                <div>
+                  <p className=" font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-body">
+                    $59.99
+                  </p>
+                </div>
+
+                <button className="font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-custom">
+                  <MdOutlineAddShoppingCart />
+                </button>
+              </Flex>
+              <Flex className={`items-center gap-[14px] mb-[22px]`}>
+                <div>
+                  <p className=" w-auto lg:w-[280px] font-os font-normal text-[12px] lg:text-[23px] text-black py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-white">
+                    Sellername
+                  </p>
+                </div>
+
+                <Flex className=" items-center gap-1 font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-body">
+                  <Image src={`star.png`} />
+                  <p>100% of 281 ratings</p>
+                </Flex>
+
+                <div>
+                  <p className=" font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-body">
+                    $59.99
+                  </p>
+                </div>
+
+                <button className="font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-custom">
+                  <MdOutlineAddShoppingCart />
+                </button>
+              </Flex>
+              <Flex className={`items-center gap-[14px] mb-[22px]`}>
+                <div>
+                  <p className=" w-auto lg:w-[280px] font-os font-normal text-[12px] lg:text-[23px] text-black py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-white">
+                    Sellername
+                  </p>
+                </div>
+
+                <Flex className=" items-center gap-1 font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-body">
+                  <Image src={`star.png`} />
+                  <p>100% of 281 ratings</p>
+                </Flex>
+
+                <div>
+                  <p className=" font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-body">
+                    $59.99
+                  </p>
+                </div>
+
+                <button className="font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-custom">
+                  <MdOutlineAddShoppingCart />
+                </button>
+              </Flex>
+              <Flex className={`items-center gap-[14px] mb-[22px]`}>
+                <div>
+                  <p className=" w-auto lg:w-[280px] font-os font-normal text-[12px] lg:text-[23px] text-black py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-white">
+                    Sellername
+                  </p>
+                </div>
+
+                <Flex className=" items-center gap-1 font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-body">
+                  <Image src={`star.png`} />
+                  <p>100% of 281 ratings</p>
+                </Flex>
+
+                <div>
+                  <p className=" font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-body">
+                    $59.99
+                  </p>
+                </div>
+
+                <button className="font-os font-normal text-[12px] lg:text-[23px] text-white py-[9px] px-2 lg:py-[13px] lg:px-[19px] rounded-lg bg-custom">
+                  <MdOutlineAddShoppingCart />
+                </button>
+              </Flex>
+            </div>
+          </div>
         </Flex>
+
+        <div className=" mt-[107px] lg:mt-[158px]">
+          <div>
+            <Flex
+              className={`items-center justify-start gap-9 lg:gap-[150px] mb-5`}
+            >
+              <h1 className=" font-os font-normal text-[16px] lg:text-[36px] text-white ">
+                Game Media
+              </h1>
+
+              <Image src={`bigLine.png`} className={`w-[50%] lg:w-auto`} />
+            </Flex>
+          </div>
+
+          <Flex
+            className={`items-center justify-between mt-[41px] flex-wrap lg:flex-nowrap`}
+          >
+            <div className="w-1/2 lg:w-1/4 p-1 lg:p-0">
+              <Image src={`media.png`} />
+            </div>
+            <div className="w-1/2 lg:w-1/4 p-1 lg:p-0">
+              <Image src={`media.png`} />
+            </div>
+            <div className="w-1/2 lg:w-1/4 p-1 lg:p-0">
+              <Image src={`media.png`} />
+            </div>
+            <div className="w-1/2 lg:w-1/4 p-1 lg:p-0">
+              <Image src={`media.png`} />
+            </div>
+          </Flex>
+        </div>
+
+        <div className="mt-[87px] lg:mt-[192px]">
+          <div>
+            <Flex className={`items-center justify-between mb-5`}>
+              <h1 className=" font-os font-normal text-[16px] lg:text-[36px] text-white ">
+                Product Reviews
+              </h1>
+
+              <Image src={`bigLine.png`} className={`w-[50%] lg:w-auto`} />
+
+              <button className=" font-os font-normal text-[12px]  lg:text-[24px] lg:py-[11px] lg:px-4 p-[6px] border-[1px] text-white border-white rounded-lg">
+                Browse All
+              </button>
+            </Flex>
+          </div>
+
+          <div className="mt-[41px] w-full">
+            <Slider {...settings}>
+              <ReviewCard />
+              <ReviewCard />
+              <ReviewCard />
+              <ReviewCard />
+            </Slider>
+          </div>
+        </div>
+
+        <div lassName="mt-[87px] lg:mt-[192px]">
+          <Newarrivals />
+        </div>
       </Container>
     </section>
   );
