@@ -11,6 +11,7 @@ import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Blog from "./pages/Blog";
+import Article from "./pages/Article";
 
 function App() {
   const router = createBrowserRouter(
@@ -22,6 +23,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/article" element={<Article />} />
       </Route>
     )
   );
