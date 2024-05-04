@@ -10,7 +10,7 @@ const GameCard = ({ className, isBorder }) => {
     <div
       className={` mx-auto h-full ${
         isBorder && "bg-custom rounded-lg p-[1px]"
-      }  mb-4`}
+      }  mb-4 w-[160px] lg:w-[395px]`}
     >
       <div
         onClick={() => navigate("/product")}

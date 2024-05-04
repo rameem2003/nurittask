@@ -106,14 +106,14 @@ const Newarrivals = () => {
 
         <div className="mt-[44px] w-full">
           <Slider {...settings}>
-            <GameCard className={`w-[158px] lg:w-[393px]`} />
-            <GameCard className={`w-[158px] lg:w-[393px]`} />
-            <GameCard className={`w-[158px] lg:w-[393px]`} />
-            <GameCard className={`w-[158px] lg:w-[393px]`} />
-            <GameCard className={`w-[158px] lg:w-[393px]`} />
-            <GameCard className={`w-[158px] lg:w-[393px]`} />
-            <GameCard className={`w-[158px] lg:w-[393px]`} />
-            <GameCard className={`w-[158px] lg:w-[393px]`} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} isBorder={true} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} isBorder={true} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} isBorder={true} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} isBorder={true} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} isBorder={true} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} isBorder={true} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} isBorder={true} />
+            <GameCard className={`w-[158px] lg:w-[393px]`} isBorder={true} />
           </Slider>
         </div>
       </Container>
