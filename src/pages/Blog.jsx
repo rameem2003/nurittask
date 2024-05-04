@@ -5,11 +5,13 @@ import Flex from "../components/Flex";
 import Image from "../components/Image";
 import BlogCard from "../components/BlogCard";
 import PaginationforBlog from "../components/PaginationforBlog";
+import BlogArticles from "../components/BlogArticles";
 
 const Blog = () => {
   return (
     <section>
       <Container>
+        <BlogArticles />
         <HomeBanner />
 
         <div className="mt-[91px] lg:mt-[202px]">

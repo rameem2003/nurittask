@@ -11,11 +11,13 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import ArticleCard from "../components/ArticleCard";
+import BlogArticles from "../components/BlogArticles";
 
 const Article = () => {
   return (
     <section>
       <Container>
+        <BlogArticles />
         <HomeBanner />
 
         <Flex className={`gap-[71px] mt-[71px] flex-col lg:flex-row`}>

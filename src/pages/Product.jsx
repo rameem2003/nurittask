@@ -11,6 +11,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import ReviewCard from "../components/ReviewCard";
 import Newarrivals from "../components/Newarrivals";
+import Header from "../components/Header";
 
 const Product = () => {
   const [slide, setSlide] = useState(0);
@@ -90,6 +91,7 @@ const Product = () => {
   return (
     <section>
       <Container>
+        <Header />
         <Flex className={`gap-[30px] flex-col lg:flex-row`}>
           <div className=" w-full lg:w-1/2">
             <Image src={`/product.png`} className={` w-full`} />

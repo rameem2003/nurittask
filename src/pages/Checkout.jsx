@@ -6,7 +6,7 @@ import { FaLock } from "react-icons/fa6";
 
 const Checkout = () => {
   return (
-    <section>
+    <section className="mt-[34px] lg:mt-[60px]">
       <Container>
         <div>
           <Flex className={`items-center justify-between mb-5`}>
