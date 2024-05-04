@@ -11,18 +11,18 @@ const Footer = () => {
     <section className="mx-[30px] mb-[21px] mt-[80px] lg:mt-[200px] rounded-lg bg-custom p-[1px]">
       <div className="bg-[#1E2127] pt-10 px-7 lg:pt-[151px] lg:px-[111px] rounded-lg">
         <Flex className={` gap-[56px] lg:gap-[155px] flex-col lg:flex-row`}>
-          <div className=" w-full lg:w-[3/12]">
+          <div className=" w-full lg:w-3/12">
             <h1 className=" font-os font-medium text-[28px] text-white mb-[27px]">
               Trustful
             </h1>
             <Flex
-              className={`items-center justify-center flex-row lg:flex-col gap-5 lg:gap-10`}
+              className={`items-center lg:items-start justify-center flex-row lg:flex-col gap-5 lg:gap-10`}
             >
               <Image className={`w-[50%] lg:w-auto`} src={`footer1.png`} />
               <Image className={`w-[50%] lg:w-auto`} src={`footer2.png`} />
             </Flex>
           </div>
-          <div className="w-[3/12]">
+          <div className="w-4/12">
             <Flex className={` gap-[82px] lg:gap-[125px]`}>
               <div className="w-[1/2]">
                 <h1 className=" font-os font-medium text-[16px] lg:text-[28px] text-white mb-[27px]">
@@ -66,11 +66,11 @@ const Footer = () => {
               </div>
             </Flex>
           </div>
-          <div className="w-[6/12]">
+          <div className="w-5/12">
             <Flex className={` gap-[57px] lg:gap-[125px] flex-col lg:flex-row`}>
               <div className="w-[1/2]">
                 <h1 className=" font-os font-medium text-[16px] lg:text-[28px] text-white mb-[27px]">
-                  Company
+                  Resources
                 </h1>
 
                 <ul>

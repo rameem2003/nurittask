@@ -14,7 +14,7 @@ const GameCard = ({ className, isBorder }) => {
     >
       <div
         onClick={() => navigate("/product")}
-        className={` bg-fade rounded-lg py-4 px-3 ${className}`}
+        className={` bg-fade rounded-lg py-4 px-3 ${className} mx-auto`}
       >
         <div className=" relative">
           <Image className={`w-full`} src={`game1.png`} />

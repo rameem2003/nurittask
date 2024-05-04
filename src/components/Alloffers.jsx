@@ -7,7 +7,7 @@ const Alloffers = () => {
   return (
     <section className=" lg:mt-[200px]">
       <Container>
-        <Flex className={`gap-[46px] flex-col lg:flex-row`}>
+        <Flex className={`gap-[56px] flex-col lg:flex-row`}>
           <div className=" w-full lg:w-1/3">
             <Specialoffers />
           </div>

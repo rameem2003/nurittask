@@ -6,10 +6,10 @@ const GameofferCard = () => {
   return (
     <div className=" rounded-3xl bg-fade p-[10px] mb-[21px]">
       <Flex className={`items-center gap-5`}>
-        <div className="w-2/12">
-          <Image src={`game1.png`} />
+        <div className="w-3/12">
+          <Image src={`offer.png`} />
         </div>
-        <div className="w-10/12">
+        <div className="w-9/12">
           <Flex className={`items-end justify-between`}>
             <div>
               <h1 className=" font-os font-normal text-[14px] lg:text-[28px] text-white">

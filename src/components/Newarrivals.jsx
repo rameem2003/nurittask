@@ -9,7 +9,7 @@ import GameCard from "./GameCard";
 const Newarrivals = () => {
   const [slide, setSlide] = useState(0);
 
-  var settings = {
+  let settings = {
     arrows: false,
     dots: false,
     infinite: true,
@@ -86,15 +86,21 @@ const Newarrivals = () => {
       <Container>
         <div>
           <Flex className={`items-center justify-between mb-5`}>
-            <h1 className=" font-os font-normal text-[16px] lg:text-[36px] text-white ">
-              New Arrivals
-            </h1>
+            <div className=" w-4/12 lg:w-2/12">
+              <h1 className=" font-os font-normal text-[16px] lg:text-[36px] text-white ">
+                New Arrivals
+              </h1>
+            </div>
 
-            <Image src={`bigLine.png`} className={`w-[50%] lg:w-auto`} />
+            <div className=" w-4/12 lg:w-8/12">
+              <Image src={`bigLine.png`} className={`  w-full mx-auto`} />
+            </div>
 
-            <button className=" font-os font-normal text-[12px]  lg:text-[24px] lg:py-[11px] lg:px-4 p-[6px] border-[1px] text-white border-white rounded-lg">
-              Browse All
-            </button>
+            <div className=" w-4/12 lg:w-2/12">
+              <button className=" ml-auto block font-os font-normal text-[12px]  lg:text-[24px] lg:py-[11px] lg:px-4 p-[6px] border-[1px] text-white border-white rounded-lg">
+                Browse All
+              </button>
+            </div>
           </Flex>
         </div>
 
