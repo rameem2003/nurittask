@@ -10,6 +10,7 @@ import {
   FaRegUserCircle,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import ArticleCard from "../components/ArticleCard";
 
 const Article = () => {
   return (
@@ -128,6 +129,75 @@ const Article = () => {
             </div>
           </div>
         </Flex>
+
+        <div className=" rounded-lg bg-custom p-[1px] w-full lg:w-[1057px] mt-[80px] lg:mt-[133px]">
+          <div className=" p-6 lg:py-[48px] lg:px-[50px] rounded-lg bg-fade">
+            <Flex className={`items-center justify-between mb-5`}>
+              <div className="w-[40%]">
+                <h1 className=" font-os font-normal text-[16px] lg:text-[36px] text-white ">
+                  Recommended Articles
+                </h1>
+              </div>
+              <div className="w-[60%]">
+                <Image src={`bigLine.png`} className={` w-full`} />
+              </div>
+            </Flex>
+            <Flex className="mt-4 lg:mt-[44px] flex-wrap">
+              <ArticleCard />
+              <ArticleCard />
+              <ArticleCard />
+              <ArticleCard />
+              <ArticleCard />
+              <ArticleCard />
+            </Flex>
+          </div>
+        </div>
+
+        <div className=" mt-[80px] lg:mt-[121px] rounded-lg bg-fade p-6 lg:py-[48px] lg:px-[50px] w-full lg:w-[1057px] ">
+          <Flex className={`items-center justify-between mb-5 `}>
+            <div className="w-[40%]">
+              <h1 className=" font-os font-normal text-[16px] lg:text-[36px] text-white ">
+                Article Comments
+              </h1>
+            </div>
+            <div className="w-[60%]">
+              <Image src={`bigLine.png`} className={` w-full`} />
+            </div>
+          </Flex>
+
+          <Flex className={`gap-[22px] flex-col lg:flex-row`}>
+            <div className="relative  w-full  lg:w-[50%]">
+              <input
+                className=" bg-body w-full py-[9px] px-3  lg:py-4 lg:px-6 rounded-lg  font-os font-normal text-[12px] lg:text-[21px] text-white placeholder:text-gray-400"
+                type="text"
+                name=""
+                id=""
+                placeholder="Name:"
+              />
+            </div>
+            <div className="relative w-full  lg:w-[50%]">
+              <input
+                className=" bg-body w-full py-[9px] px-3  lg:py-4 lg:px-6 rounded-lg  font-os font-normal text-[12px] lg:text-[21px] text-white placeholder:text-gray-400"
+                type="text"
+                name=""
+                id=""
+                placeholder="Email:"
+              />
+            </div>
+          </Flex>
+
+          <textarea
+            name=""
+            id=""
+            className=" mt-[22px] h-[178px] bg-body w-full py-[9px] px-3  lg:py-4 lg:px-6 rounded-lg  font-os font-normal text-[12px] lg:text-[21px] text-white placeholder:text-gray-400"
+            type="text"
+            placeholder="Comment:"
+          ></textarea>
+
+          <button className="mt-[27px] py-[6px] px-2 lg:py-[17px] lg:px-[34px] rounded-lg bg-custom font-os font-normal text-[12px] lg:text-[23px] text-white">
+            Publish
+          </button>
+        </div>
       </Container>
     </section>
   );
